@@ -34,7 +34,7 @@ crop_prices = {crop.upper(): price for crop, price in zip(market_prices_df["Crop
 
 # Crop Model
 crop_model = joblib.load("ml_models/crop_model.pkl")
-aspect_encoder = joblib.load("ml_models/aspect_encoder.pkl")
+aspect_encoder = joblib.load("backend/ml_models/filename.pkl")
 texture_encoder = joblib.load("ml_models/texture_encoder.pkl")
 crop_label_encoder = joblib.load("ml_models/crop_label_encoder.pkl")
 
