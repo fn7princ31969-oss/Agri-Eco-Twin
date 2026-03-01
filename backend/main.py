@@ -8,6 +8,15 @@ app = FastAPI()
 
 import pandas as pd
 import os
+import joblib
+
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_DIR = os.path.join(BASE_DIR, "ml_models")
+
+aspect_encoder = joblib.load(os.path.join(MODEL_DIR, "aspect_encoder.pkl"))
+crop_model = joblib.load(os.path.join(MODEL_DIR, "crop_model.pkl"))
+yield_model = joblib.load(os.path.join(MODEL_DIR, "yield_model.pkl"))
 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
